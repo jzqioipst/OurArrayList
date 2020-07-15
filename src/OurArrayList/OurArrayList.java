@@ -5,24 +5,24 @@ public class OurArrayList {
 	private int count = 0;
 	
 	public boolean add(int e) {
-		//°ø°£ÀÖÀ¸¸é ±×³É ³¡¿¡ Ãß°¡
-		//ºÎÁ·ÇÏ¸é array¸¦ new int[´õÅ©°Ô] ÇÒ´ç ¹Ş¾Æ¼­
-		//±âÁ¸ÀÇ °ªµé ¸ğµÎ ÀÌ»ç + »õ·Î¿î °ª Ãß°¡
+		//ê³µê°„ìˆìœ¼ë©´ ê·¸ëƒ¥ ëì— ì¶”ê°€
+		//ë¶€ì¡±í•˜ë©´ arrayë¥¼ new int[ë”í¬ê²Œ] í• ë‹¹ ë°›ì•„ì„œ
+		//ê¸°ì¡´ì˜ ê°’ë“¤ ëª¨ë‘ ì´ì‚¬ + ìƒˆë¡œìš´ ê°’ ì¶”ê°€
 		return false;
 	}
 	
 	public boolean add(int index, int e) {
-		//¿øÇÏ´Â index¿¡ ¿ä¼Ò »ğÀÔ
+		//ì›í•˜ëŠ” indexì— ìš”ì†Œ ì‚½ì…
 		return false;
 	}
 	
 	public int get(int index) {
-		//ÇØ´ç indexÀÇ °ª ÀÖÀ¸¸é ¸®ÅÏ
+		//í•´ë‹¹ indexì˜ ê°’ ìˆìœ¼ë©´ ë¦¬í„´
 		return 0;
 	}
 	
 	public boolean remove(int index) {
-		//»èÁ¦
+		//ì‚­ì œ
 		return false;
 	}
 }
