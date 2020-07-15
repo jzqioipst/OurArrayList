@@ -25,10 +25,16 @@ public class OurArrayList {
 		//원하는 index에 요소 삽입
 		//원하는 index가 array의 사이즈보다 클 경우 false return
 		//새로 하나를 추가했을 때 배열의 크기가 지정된 크기보다 커질 경우
-		//
 		//현재 주어진 배열 사이즈로 충분히 담을 수 있는 경우
+		//return type void
+		add(array[count-1]);
+		for(int i = count-2; i>index; i--) {
+			array[i] = array[i-1];
+		}
+		array[index] = e;
 		return false;
 	}
+
 	
 	public int get(int index) {
 		//해당 index의 값 있으면 리턴
