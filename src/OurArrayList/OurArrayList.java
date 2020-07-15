@@ -1,7 +1,7 @@
 package OurArrayList;
 
 public class OurArrayList {
-	private int[] array = new int[10];
+	private int[] array = new int[5];
 	private int count = 0;
 	
 	public boolean add(int e) {
@@ -42,19 +42,25 @@ public class OurArrayList {
 			return false;
 		}
 		
+		int[] newArray = null;
+		if ((count - 1) < (int)(array.length * (1/(double)3))) {
+			newArray = new int[array.length / 2];
+			for (int i = 0; i < index; i++) {
+				newArray[i] = array[i];
+			}
+		}
+		
 		for (int i = index; i < count - 1; i++) {
-			array[i] = array[i + 1];
+			if (newArray == null) {
+				array[i] = array[i + 1];
+			} else {
+				newArray[i] = array[i + 1];
+			}			
+		}
+		if (newArray != null) {
+			array = newArray;
 		}
 		count--;
-		
-		if ((int)(array.length * (1/(double)3)) < count) {
-			return true;
-		}
-		
-		int[] newArray = new int[array.length / 2];
-		for (int i = 0; i < count; i++) {
-			newArray[i] = array[i];
-		}		
 		
 		return true;
 	}
