@@ -1,12 +1,14 @@
 package OurArrayList;
 
-public class OurArrayList {
-	private int[] array = new int[5];
+public class OurArrayList<T> {
+	@SuppressWarnings("unchecked")
+	private T[] array = (T[])new Object[5];
 	private int count = 0;
 	
-	public boolean add(int e) {
+	@SuppressWarnings("unchecked")
+	public boolean add(T e) {
 		if(count==array.length) {
-			int [] newArray = new int[count*2];
+			T [] newArray = (T[])new Object[count*2];
 			for(int i = 0; i<array.length; i++) {
 				newArray[i] = array[i];
 			}
@@ -18,7 +20,7 @@ public class OurArrayList {
 		return true;
 	}
 	
-	public boolean add(int index, int e) {
+	public boolean add(int index, T e) {
 		add(array[count-1]);
 		for(int i = count-2; i>index; i--) {
 			array[i] = array[i-1];
@@ -29,7 +31,7 @@ public class OurArrayList {
 	}
 
 	
-	public int get(int index) {
+	public T get(int index) {
 		return array[index];
 	}
 	
@@ -37,14 +39,15 @@ public class OurArrayList {
 		return count;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public boolean remove(int index) {	
 		if (count == 0 || index < 0 || count <= index) {
 			return false;
 		}
 		
-		int[] newArray = null;
+		T[] newArray = null;
 		if ((count - 1) < (int)(array.length * (1/(double)3))) {
-			newArray = new int[array.length / 2];
+			newArray = (T[])new Object[array.length / 2];
 			for (int i = 0; i < index; i++) {
 				newArray[i] = array[i];
 			}
