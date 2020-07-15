@@ -21,6 +21,10 @@ public class OurArrayList {
 		return 0;
 	}
 	
+	public int size() {
+		return 0;
+	}
+	
 	public boolean remove(int index) {
 		//삭제
 		return false;
