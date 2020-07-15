@@ -64,15 +64,18 @@ public class OurArrayList {
 		
 		return true;
 	}
+	
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		for(int i=0;i<count;i++) {
-			builder.append(i+1+"번째 숫자 : ");
+		builder.append('[');
+		for (int i = 0; i < count; i++) {
 			builder.append(array[i]);
-			builder.append("\n");
+			if (i < count - 1) {
+				builder.append(", ");
+			}			
 		}
-		System.out.println();
+		builder.append(']');
 		return builder.toString();
 	}
 }
