@@ -13,6 +13,7 @@ public class OurArrayList {
 	
 	public boolean add(int index, int e) {
 		//원하는 index에 요소 삽입
+		
 		return false;
 	}
 	
@@ -22,8 +23,9 @@ public class OurArrayList {
 	}
 	
 	public int size() {
-		return 0;
+		return count;
 	}
+
 	
 	public boolean remove(int index) {
 		//삭제
