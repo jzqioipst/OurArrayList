@@ -18,14 +18,12 @@ public class OurArrayList {
 	}
 	
 	public int get(int index) {
-		//해당 index의 값 있으면 리턴
-		return 0;
+		return array[index];
 	}
 	
 	public int size() {
 		return count;
 	}
-
 	
 	public boolean remove(int index) {
 		//삭제
