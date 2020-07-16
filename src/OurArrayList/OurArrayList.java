@@ -20,14 +20,12 @@ public class OurArrayList<T> {
 		return true;
 	}
 	
-	public boolean add(int index, T e) {
+	public void add(int index, T e) {
 		add(array[count-1]);
 		for(int i = count-2; i>index; i--) {
 			array[i] = array[i-1];
 		}
 		array[index] = e;
-		
-		return false;
 	}
 
 	
